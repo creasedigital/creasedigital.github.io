@@ -3,7 +3,7 @@ import {
 	Flex,
 	Image,
 	Text,
-	useColorModeValue,
+	// useColorModeValue,
 	useColorMode,
 	Heading,
 } from "@chakra-ui/react";
@@ -19,7 +19,7 @@ import { loadFull } from "tsparticles";
 
 const Home = () => {
 	const { cLightBg, cLightBlue, cDarkBg, cDarkGrey, cBlue } = Colors;
-	const color = useColorModeValue("cDarkGrey", "cBlue");
+	// const color = useColorModeValue("cDarkGrey", "cBlue");
 	const { colorMode } = useColorMode();
 
 	const particlesInit: any = useCallback(

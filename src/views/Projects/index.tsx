@@ -23,7 +23,10 @@ const Projects = () => {
 					Live Projects
 				</Heading>
 
-				<Grid templateColumns={{ lg: "repeat(2, 1fr)" }} gap="2rem">
+				<Grid
+					templateColumns={{ lg: "repeat(2, 1fr)" }}
+					gap={{ base: "2.4rem", md: "3.2rem" }}
+				>
 					{liveProjects.map(
 						(
 							p: {
@@ -65,7 +68,10 @@ const Projects = () => {
 					Side Projects
 				</Heading>
 
-				<Grid templateColumns={{ lg: "repeat(2, 1fr)" }} gap="2rem">
+				<Grid
+					templateColumns={{ lg: "repeat(2, 1fr)" }}
+					gap={{ base: "2.4rem", md: "3.2rem" }}
+				>
 					{sideProjects.map(
 						(
 							q: {

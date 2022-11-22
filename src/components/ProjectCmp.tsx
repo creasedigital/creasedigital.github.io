@@ -1,4 +1,12 @@
-import { Box, Heading, Image, Text, Badge, Link } from "@chakra-ui/react";
+import {
+	Box,
+	Heading,
+	Image,
+	Text,
+	Badge,
+	Link,
+	useColorModeValue,
+} from "@chakra-ui/react";
 import Colors from "constants/Colors";
 import { useState } from "react";
 import ReactModal from "react-modal";
@@ -57,13 +65,21 @@ const ProjectCmp: React.FC<IProjectCmp> = ({
 		setIsOpen(false);
 	}
 
-	const { cDarkBg, cDarkGrey } = Colors;
+	const { cLightBg, cDarkBg, cDarkGrey, cLightBlue } = Colors;
+	const bg = useColorModeValue(cLightBg, cDarkBg);
+	const color = useColorModeValue(cDarkGrey, cLightBlue);
 
 	return (
-		<>
+		<Box
+			bg={bg}
+			cursor="pointer"
+			p={8}
+			borderRadius={"24px"}
+			boxShadow="1px 5px 15px rgba(0,0,0,0.2)"
+		>
 			<Box key={key}>
 				<Image src={img} alt="project" onClick={openModal} />
-				<Box maxWidth="800px">
+				<Box maxWidth="800px" color={color}>
 					<Heading
 						fontWeight="400"
 						fontFamily={"Poppins, sans-serif"}
@@ -142,7 +158,7 @@ const ProjectCmp: React.FC<IProjectCmp> = ({
 					</Link>
 				</Box>
 			</ReactModal>
-		</>
+		</Box>
 	);
 };
 export default ProjectCmp;
