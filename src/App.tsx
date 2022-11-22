@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, useColorModeValue } from "@chakra-ui/react";
+import Page from "layouts/Page";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "views/About";
+import Contact from "views/Contact";
+import Projects from "views/Projects";
+import { ROUTES } from "./utils/routes";
+import Home from "./views/Home";
+import Colors from "constants/Colors";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const { cLightBg, cDarkBg, cDarkGrey, cLightBlue } = Colors;
+	const bg = useColorModeValue(cLightBg, cDarkBg);
+	const color = useColorModeValue(cDarkGrey, cLightBlue);
+
+	return (
+		<Box color={color} bg={bg} m="0px">
+			<BrowserRouter>
+				<Routes>
+					<Route path={ROUTES.home} element={<Page />}>
+						<Route index element={<Home />} />
+						<Route path={ROUTES.projects} element={<Projects />} />
+						<Route path={ROUTES.about} element={<About />} />
+						<Route path={ROUTES.contact} element={<Contact />} />
+					</Route>
+				</Routes>
+			</BrowserRouter>
+		</Box>
+	);
 }
 
 export default App;
