@@ -10,7 +10,7 @@ const config: ThemeConfig = {
 export const theme = extendTheme({
 	config,
 	fonts: {
-		heading: `Playfair Display, ${baseTheme.fonts?.heading}`,
+		heading: `Poppins, ${baseTheme.fonts?.heading}`,
 		body: `Poppins, ${baseTheme.fonts?.body}`,
 	},
 	components: {

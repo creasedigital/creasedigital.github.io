@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
 	Box,
 	Heading,
@@ -11,6 +12,8 @@ import Colors from "constants/Colors";
 import { useState } from "react";
 import ReactModal from "react-modal";
 // import Button from "./Button";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 interface IProjectCmp {
 	id: number;
@@ -69,6 +72,10 @@ const ProjectCmp: React.FC<IProjectCmp> = ({
 	const bg = useColorModeValue(cLightBg, cDarkBg);
 	const color = useColorModeValue(cDarkGrey, cLightBlue);
 
+	useEffect(() => {
+		Aos.init({ duration: 2000 });
+	}, []);
+
 	return (
 		<Box
 			bg={bg}
@@ -76,15 +83,19 @@ const ProjectCmp: React.FC<IProjectCmp> = ({
 			p={8}
 			borderRadius={"24px"}
 			boxShadow="1px 5px 15px rgba(0,0,0,0.2)"
+			data-aos="fade-up"
+			data-aos-offset="200"
+			data-aos-duration="1500"
+			data-aos-easing="ease-in-sine"
 		>
 			<Box key={key}>
 				<Image src={img} alt="project" onClick={openModal} />
 				<Box maxWidth="800px" color={color}>
 					<Heading
-						fontWeight="400"
+						my={{ base: "1rem", md: "1.6rem" }}
+						fontWeight="700"
 						fontFamily={"Poppins, sans-serif"}
 						letterSpacing="150%"
-						my={{ base: "1rem", md: "1.6rem" }}
 					>
 						{title}
 					</Heading>
@@ -98,7 +109,7 @@ const ProjectCmp: React.FC<IProjectCmp> = ({
 				style={customStyles}
 				// contentLabel="Example Modal"
 			>
-				<Box>
+				<Box p={4}>
 					<Image
 						src={img}
 						alt="project"
@@ -106,16 +117,34 @@ const ProjectCmp: React.FC<IProjectCmp> = ({
 						objectFit={"contain"}
 					/>
 					<Heading
-						fontSize="2.2rem"
-						textTransform="uppercase"
-						fontWeight="500"
+						fontWeight="700"
+						fontFamily={"Poppins, sans-serif"}
 						letterSpacing="150%"
-						color="cDarkGrey"
+						color={cDarkGrey}
 					>
 						{title}
 					</Heading>
-					<Text color="black">{desc}</Text>
-					{role && <Text>{role}</Text>}
+					<Text
+						color="black"
+						fontSize={{
+							base: "1.2rem",
+							md: "1.4rem",
+						}}
+						my={{ base: "1rem", md: "1.6rem" }}
+					>
+						{desc}
+					</Text>
+					{role && (
+						<Text
+							fontSize={{
+								base: "1.2rem",
+								md: "1.4rem",
+							}}
+							my={{ base: "1rem", md: "1.6rem" }}
+						>
+							{role}
+						</Text>
+					)}
 					<Box mb={"1rem"}>
 						{stack.map((data, index: number) => (
 							<Badge
@@ -123,8 +152,8 @@ const ProjectCmp: React.FC<IProjectCmp> = ({
 								borderColor={cDarkBg}
 								variant="outline"
 								borderRadius="full"
-								p={{ base: "0.2rem", md: "0.5rem" }}
-								m={{ base: "0.2rem", md: "0.5rem" }}
+								p={{ base: "0.4rem", md: "0.8rem" }}
+								m={{ base: "0.4rem", md: "0.6rem" }}
 								key={index}
 								color={cDarkGrey}
 							>
