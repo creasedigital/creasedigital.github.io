@@ -6,6 +6,7 @@ import {
 	// useColorModeValue,
 	useColorMode,
 	Heading,
+	// useMediaQuery,
 } from "@chakra-ui/react";
 import TypeWriter from "typewriter-effect";
 import CHRIS from "assets/imgs/crease.png";
@@ -16,6 +17,7 @@ import { useCallback } from "react";
 import type { Container } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+// import HomeV2 from "../HomeV2";
 
 const Home = () => {
 	const { cLightBg, cLightBlue, cDarkBg, cDarkGrey, cBlue } = Colors;
@@ -33,6 +35,8 @@ const Home = () => {
 		},
 		[],
 	);
+
+	// const [isLargerthan994px] = useMediaQuery("(min-width: 994px)");
 
 	return (
 		<>
@@ -212,6 +216,7 @@ const Home = () => {
 					</Box>
 				)}
 			</Flex>
+			{/* isLargerthan994px ? <HomeV2 /> : null */}
 		</>
 	);
 };
