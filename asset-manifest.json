@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.88a2511c.css",
+    "main.js": "/static/js/main.305e7ee2.js",
+    "static/media/s2_muzzyk.jpg": "/static/media/s2_muzzyk.9779dc6abe7e944299cc.jpg",
+    "static/media/crease.png": "/static/media/crease.159939ab94814dc85d0c.png",
+    "static/media/s3_cloudbank.jpg": "/static/media/s3_cloudbank.b8ef3bb9b2b795880c1b.jpg",
+    "static/media/3_unboxd.jpg": "/static/media/3_unboxd.41f7ee43812c2dbcc96e.jpg",
+    "static/media/1_mainstack.jpg": "/static/media/1_mainstack.908b08bdac0cf37237a6.jpg",
+    "static/media/s1_adrosol.jpg": "/static/media/s1_adrosol.645f6656dfb0adc9c5e7.jpg",
+    "static/media/s4_github.jpg": "/static/media/s4_github.729ebdd56a13bb5c95d1.jpg",
+    "static/media/2_fixam.jpg": "/static/media/2_fixam.6eadd5e71ef3dda23eaf.jpg",
+    "static/media/4_gaca.jpg": "/static/media/4_gaca.31fbc124dd29f817ed9f.jpg",
+    "static/media/creasebw.png": "/static/media/creasebw.44a1dae597f8108e7ba1.png",
+    "static/media/ohjay.svg": "/static/media/ohjay.5b38babbca3f0a6f9f60528e0e0a8cc9.svg",
+    "static/media/emojione-v1_smiling-face-with-heart-eyes.svg": "/static/media/emojione-v1_smiling-face-with-heart-eyes.534753a159890ffb9c491c14253417e9.svg",
+    "index.html": "/index.html",
+    "main.88a2511c.css.map": "/static/css/main.88a2511c.css.map",
+    "main.305e7ee2.js.map": "/static/js/main.305e7ee2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88a2511c.css",
+    "static/js/main.305e7ee2.js"
+  ]
+}
